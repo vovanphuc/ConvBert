@@ -67,8 +67,8 @@ class PretrainingConfig(object):
 
     # batch sizes
     self.max_seq_length = 128
-    self.train_batch_size = 128
-    self.eval_batch_size = 128
+    self.train_batch_size = 32
+    self.eval_batch_size = 32
 
     # TPU settings
     self.use_tpu = False
@@ -116,8 +116,8 @@ class PretrainingConfig(object):
     elif self.model_size in ["base"]:
       self.generator_hidden_size = 1/3
       self.learning_rate = 2e-4
-      self.train_batch_size = 256
-      self.eval_batch_size = 256
+      self.train_batch_size = 32
+      self.eval_batch_size = 32
       self.conv_kernel_size=9
       self.linear_groups=1
       self.head_ratio=2
