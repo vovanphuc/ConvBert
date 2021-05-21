@@ -37,7 +37,7 @@ class PretrainingConfig(object):
     self.num_eval_steps = 100
 
     # model settings
-    self.model_size = "medium-small"  # one of "small", "medium-smal", or "base"
+    self.model_size = "medium-small"  # one of "small", "medium-small", or "base"
     # override the default transformer hparams for the provided model size; see
     # modeling.BertConfig for the possible hparams and util.training_utils for
     # the defaults
