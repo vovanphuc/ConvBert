@@ -8,6 +8,7 @@ from __future__ import print_function
 
 import os
 
+path_save_model = ''
 
 class PretrainingConfig(object):
   """Defines pre-training hyperparameters."""
@@ -79,10 +80,11 @@ class PretrainingConfig(object):
     self.gcp_project = None  # project name for the Cloud TPU-enabled project
 
     # default locations of data files
+
     self.pretrain_tfrecords = os.path.join(
         data_dir, "pretrain_tfrecords/pretrain_data.tfrecord*")
     self.vocab_file = os.path.join(data_dir, "vocab.txt")
-    self.model_dir = os.path.join(data_dir, "models", model_name)
+    self.model_dir = os.path.join(path_save_model, "models", model_name)
     results_dir = os.path.join(self.model_dir, "results")
     self.results_txt = os.path.join(results_dir, "unsup_results.txt")
     self.results_pkl = os.path.join(results_dir, "unsup_results.pkl")
